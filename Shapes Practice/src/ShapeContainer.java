@@ -10,7 +10,7 @@ public class ShapeContainer<T extends Shape> {
 	}
 	
 	public Double calculateArea() throws Exception{
-		double[] sides = shape.sidesMeasurments();
+		Double[] sides = shape.sidesMeasurments();
 		
 		if(type.equals("Square")){
 			return Math.pow(sides[0], 2.0);
@@ -27,7 +27,7 @@ public class ShapeContainer<T extends Shape> {
 	}
 
 	public Double calculatePerimeter() throws Exception{
-		double[] sides = shape.sidesMeasurments();
+		Double[] sides = shape.sidesMeasurments();
 		
 		if(type.equals("Square")){
 			return sides[0]*4.0;
@@ -43,11 +43,12 @@ public class ShapeContainer<T extends Shape> {
 		}
 	}
 
-	public void changeShapeScale(double scale){
-		double[] sides = shape.sidesMeasurments();
+	public Double[] changeShapeScale(double scale){
+		Double[] sides = shape.sidesMeasurments();
 
 		for (int i = 0; i < sides.length; i++) {
 			sides[i] *= scale;
 		}
+		return sides;
 	}
 }

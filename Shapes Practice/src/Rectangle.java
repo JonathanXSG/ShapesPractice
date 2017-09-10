@@ -2,7 +2,7 @@
 public class Rectangle implements Shape {
 
 	@Override
-	public double[] sidesMeasurments() {
+	public Double[] sidesMeasurments() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -11,6 +11,12 @@ public class Rectangle implements Shape {
 	public String shapeType() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void setSides() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
