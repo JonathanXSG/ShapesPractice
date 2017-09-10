@@ -1,5 +1,10 @@
 
 public class Square implements Shape {
+	private double side;
+	
+	public Square(double s){
+		this.side = s;
+	}
 
 	@Override
 	public Double[] sidesMeasurments() {
@@ -10,7 +15,7 @@ public class Square implements Shape {
 	@Override
 	public String shapeType() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Square";
 	}
 
 	@Override
