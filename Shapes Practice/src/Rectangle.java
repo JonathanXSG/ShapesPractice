@@ -27,6 +27,11 @@ public class Rectangle implements Shape {
 		this.height = S[0];
 		this.width = S[1];		
 	}
+	
+	@Override
+	public String toString(){
+		return "Rectangle with width: "+this.width+", height: " +this.height;
+	}
 
 	
 	

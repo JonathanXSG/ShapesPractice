@@ -23,6 +23,11 @@ public class Square implements Shape {
 	public void setSides(Double[] S) {
 		this.side = S[0];
 	}
+	
+	@Override
+	public String toString(){
+		return "Square with sides: "+this.side;
+	}
 
 	
 }

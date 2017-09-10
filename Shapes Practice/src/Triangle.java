@@ -33,6 +33,11 @@ public class Triangle implements Shape {
 		this.side2 = S[2];
 		this.height = S[3];
 	}
+	
+	@Override
+	public String toString(){
+		return "Triangle with base: " +this.base + ", side1: "+this.side1+", side2: "+this.side2+ ", height: "+this.height;
+	}
 
 
 }
