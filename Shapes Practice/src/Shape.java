@@ -1,6 +1,6 @@
 
 public interface Shape {
-	Double[] sidesMeasurments();
+	Double[] shapeMeasurments();
 	String shapeType();
-	void setSides();
+	void setSides(Double[] S);
 }
