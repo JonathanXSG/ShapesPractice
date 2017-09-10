@@ -1,10 +1,9 @@
 import java.util.Random;
-import java.util.Scanner;
 
 public class ShapesMain {
 
 	private static Shape[] shapes = new Shape[4];
-	private static ShapeContainer shapeContainer;
+	private static ShapeContainer<Shape> shapeContainer;
 	private static Random r = new Random();
 	public static void main(String[] args) {
 		
