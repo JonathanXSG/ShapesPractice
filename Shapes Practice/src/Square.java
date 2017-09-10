@@ -1,22 +1,28 @@
 
 public class Square implements Shape {
+	private double side;
+	
+	public Square(double s){
+		this.side = s;
+	}
 
 	@Override
-	public Double[] sidesMeasurments() {
-		// TODO Auto-generated method stub
-		return null;
+	public Double[] shapeMeasurments() {
+		Double[] measurments = new Double[1];
+		measurments[0] = this.side;
+		return measurments;
 	}
 
 	@Override
 	public String shapeType() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return "Square";
 	}
 
 	@Override
-	public void setSides() {
-		// TODO Auto-generated method stub
-		
+	public void setSides(Double[] S) {
+		this.side = S[0];
 	}
 
+	
 }
