@@ -9,25 +9,9 @@ public class ShapesMain {
 	private static Scanner input = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		
-		shapes[0] = new Triangle(randomInt(),randomInt(),randomInt(),randomInt());
-		shapes[1] = new Rectangle(randomInt(), randomInt());
-		shapes[2] = new Square(randomInt());
-		System.out.println("There are 3 new Shapes created!");
-		System.out.println();
-		
-		for(Shape sh: shapes){
-			if(sh != null){
-				System.out.println(sh.toString());
-				System.out.println("Its Perimeter is equal to: " +calcShapePerimeter(sh));
-				System.out.println("Its Area is equal to: " +calcShapeArea(sh));
-				int scale = randomInt();
-				scaleShape(sh, scale);
-				System.out.println("The new Rescaled  by "+scale+" is "+sh.toString());
-				System.out.println("Its Perimeter is equal to: " +calcShapePerimeter(sh));
-				System.out.println("Its Area is equal to: " +calcShapeArea(sh));
-				System.out.println();
-			}
+		while(true){
+			showMenu();
+			menuSelector();
 		}
 	}
 	
@@ -140,7 +124,17 @@ public class ShapesMain {
 	 */
 	private static <T extends Shape> void showShapeInfo(T shape){
 		// Implement method and handle exception if there's not shape created
-		
+		if(shapes[0] != null){
+			System.out.println();
+			System.out.println(shapes[0].toString());
+		}
+		else{
+			try {
+				throw new IndexOutOfBoundsException("No shape has been created yet.");
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+		}
 	}
 	
 	/**
